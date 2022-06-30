@@ -6,15 +6,12 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            // Программа, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-            int number = new Random().Next(100, 1000);
-            Console.WriteLine($"Рандомное число: {number}");
-            Console.WriteLine(digitTwo(number));
+            // Программа, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-            int digitTwo(int number)
-            {
-                return (number % 100 / 10);
-            }
+
+
+
+
         }
     }
 }
