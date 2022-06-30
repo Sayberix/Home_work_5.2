@@ -6,15 +6,19 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            // Программа, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-            int number = new Random().Next(100, 1000);
-            Console.WriteLine($"Рандомное число: {number}");
-            Console.WriteLine(digitTwo(number));
+            // Программа, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-            int digitTwo(int number)
+            Console.WriteLine("Введите номер дня недели (от 1 до 7):");
+            int  dayOfWeek= Convert.ToInt32(Console.ReadLine());
+            if (dayOfWeek >= 1 && dayOfWeek <= 7)
             {
-                return (number % 100 / 10);
+                if(dayOfWeek >= 1 && dayOfWeek <= 5)
+                    Console.Write("Заданный день недели не является выходным!");
+                else
+                    Console.Write("Заданный день недели является выходным!");
             }
+            else
+                Console.WriteLine("Неверно введенный день недели!");
         }
     }
 }
